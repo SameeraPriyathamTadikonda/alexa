@@ -1,0 +1,22 @@
+
+/*
+ * GET home page.
+ */
+var mysql = require('../mysql');
+var queryToChangeBackground = "UPDATE `alexadb`.`config_params` SET `value`='2' WHERE `key`='background_image'";
+
+exports.index = function(req, res){
+	mysql.fetchData(
+			function(err, results) {
+				if (err) {
+					console.log(err);
+					throw err;
+				} else {
+					console.log("Updated");
+					
+					res.send("Success");
+				}
+				
+			}, queryToChangeBackground);
+	
+};
