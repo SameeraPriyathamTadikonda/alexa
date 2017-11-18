@@ -13,7 +13,6 @@ function getConnection(){
 	return connection;
 }
 
-
 function fetchData(callback,sqlQuery){
 	
 	console.log("\nSQL Query::"+sqlQuery);
