@@ -4,9 +4,9 @@ var mysql = require('mysql');
 //Put your mysql configuration settings - user, password, database and port
 function getConnection(){
 	var connection = mysql.createConnection({
-		 host     : 'alexamysqlinstance.cg53yrbxv4gu.us-east-2.rds.amazonaws.com',
-		    user     : 'admin',
-		    password : 'password',
+		 host     : 'dbabcd.c4wng6coebei.us-east-1.rds.amazonaws.com',
+		    user     : 'root',
+		    password : 'rootpass',
 		    database : 'alexadb',
 		    port	 : 3306
 	});
