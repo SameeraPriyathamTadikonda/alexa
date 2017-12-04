@@ -30,6 +30,12 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/dashboard', routes.dashboard);
 app.get('/users', user.list);
+app.get('/moveaside', routes.moveaside);
+app.get('/changefont', routes.changefont);
+app.get('/changetextsize', routes.changetextsize);
+app.get('/changetext', routes.changetext);
+app.get('/changetextstyle', routes.changetextstyle);
+app.get('/changecolor', routes.changecolor);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
