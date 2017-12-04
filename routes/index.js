@@ -6,7 +6,7 @@ var mysql = require('./mysql');
 
 
 exports.index = function(req, res){
-	var bgName = req.param.backgroundName;
+	var bgName = req.params.backgroundName;
 	console.log("Background: "+bgName);
 	var queryToChangeBackground = "UPDATE `config_params` SET `value`='1' WHERE `inputkey`='background_image'";
 	mysql.fetchData(
