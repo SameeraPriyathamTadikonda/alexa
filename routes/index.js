@@ -110,6 +110,8 @@ exports.changetextstyle = function(req, res){
 };
 
 exports.changecolor = function(req, res){
+	var name = req.param('name');
+	console.log("Name: "+name);
 	var queryToChangeColor = "UPDATE `config_params` SET `value`='1' WHERE `inputkey`='font_color'";
 	mysql.fetchData(
 			function(err, results) {
