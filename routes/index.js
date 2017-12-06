@@ -84,7 +84,7 @@ exports.changetext = function(req, res) {
 exports.changeimage = function(req, res) {
 	var name = req.param('name');
 	console.log("Name: " + name);
-	var queryToChangeColor = "UPDATE `config_params` SET '" + name+ "'CASE WHEN '" + name + "'=1 THEN 2 ELSE 1 END";
+	var queryToChangeColor = "UPDATE `config_params` SET '" + name+ "' CASE WHEN '" + name + "'=1 THEN 2 ELSE 1 END";
 	mysql.fetchData(function(err, results) {
 		if (err) {
 			console.log(err);
