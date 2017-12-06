@@ -2,6 +2,11 @@
  * GET home page.
  */
 var mysql = require('./mysql');
+exports.index = function(req, res) {
+	console.log("success");
+	res.send("success");
+
+};
 
 exports.changebackground = function(req, res) {
 	var bgName = req.param('backgroundName');
