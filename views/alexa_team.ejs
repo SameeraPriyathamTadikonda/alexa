@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-<title>UI With Alexa </title>
+<title>Arkisto</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Abinethri Santhanam">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="mystyle.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif}
 body, html {
@@ -18,24 +17,26 @@ body, html {
 .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url('<%=url%>');
+    background-image: url("amazon-tap.jpg");
     min-height: 100%;
 }
 .w3-bar .w3-button {
     padding: 30px;
-    margin-top: 50px;
+   <!-- margin-top: 20px;-->
+    
 }
 </style>
 
-
+<body>
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-grey w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="Technology-Science-Logo-6.png" style="width:40%; height:30%"></a>
+  <div class="w3-bar w3-light-grey" w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="Technology-Science-logo-6.png" style= "width:50%; height:40px;"></a>
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-users"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#focusareas" class="w3-bar-item w3-button"><i class="fa fa-th"></i> FOCUS AREAS</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-mobile fa-lg"></i> CONTACT</a>
     </div>
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -46,10 +47,9 @@ body, html {
 
 <!-- Sidebar for menu -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#focusareas" onclick="w3_close()" class="w3-bar-item w3-button">FOCUS AREAS</a>
   <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
@@ -57,7 +57,7 @@ body, html {
 <!-- Header  -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">The Future is here.</span><br>
+    <span class="w3-jumbo w3-hide-small  w3-animate-left">The Future is here.</span><br>
     <span class="w3-large">Innovation begins Now</span>
     <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
   </div> 
@@ -74,7 +74,8 @@ body, html {
 
 <!-- About Section -->
 <div class="w3-container" id="about">
-  <h3 class="w3-center" style="padding:128px">ABOUT THE COMPANY </h3>
+  <h3 class="w3-center" style="padding:128px 16px">ABOUT THE COMPANY </h3>
+  <p class="w3-center w3-large">Arkisto is answering our clients with real business challenges. Here's How.</p>
   <p class="w3-center w3-large">Why Choose Us?</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px;" >
   <!--<div class="w3-row"> > -->
@@ -83,14 +84,14 @@ body, html {
     </div>
     <div class="w3-half">
       <p class="w3-large">Organised Team</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p>"We build projects around motivated individuals.  We give them the environment and support they need, and trust them to get the job done."</p>
     </div>
   </div>
   
   <div class="w3-row">
     <div class="w3-half">
       <p class=" w3-center w3-large">Design To Perfection</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <p class=" w3-center">"A good design is not the one that correctly predicts the future, it’s one that makes adapting to the future affordable." We make this happen for you.</p>
     </div>
     <div class="w3-half">
       <img src="item-07.jpg" style="width:100%;">
@@ -103,16 +104,16 @@ body, html {
    </div>
    <div class="w3-half">
       <p class=" w3-center w3-large">Passion</p>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <p class=" w3-center">“Your skills should transcend technology platform”. Passion to learn is our motto.</p>
     </div>
   </div>
 
   <div class="w3-row">
     <div class="w3-half">
       <p class=" w3-center w3-large">Customer Support</p>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <p class=" w3-center">"Customer service represents the heart of a brand in the hearts of its customers". We always participate to exceed customer expectations.</p>
     </div>
-    <div class="w3-half">
+    <div class="w3-half"> 
       <img src="customer_support.jpeg" style="width:100%;">
     </div>
   </div>
@@ -124,36 +125,36 @@ body, html {
 <div class="w3-container" style="padding:128px 16px" id="team">
   <h3 class="w3-center">OUR TEAM</h3>
   <p class="w3-center w3-large"> Our team is composed of dedicated professionals who are committed to providing superior service to our customers — and who have the skills and knowledge necessary to deliver timely, well targeted, and affordable solutions</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+  <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="Priyatham.jpg" style="width:100%;">
+        <img src="Priyatham.jpg" style="width:100%; height: 333px;"">
         <div class="w3-container">
           <h3>Priyatham Tadikonda</h3>
           <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>"Passionate about leading the company and forging my path with goals in mind, and when you look back on your life, you’ll be able to say you took charge of your own destiny. Business is constantly changing,so should we to stay at the top."</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="<%=url%>" style="width:100%;">
+        <img src="abinethripic.jpg" style="width:100%;">
         <div class="w3-container">
           <h3>Abinethri Santhanam</h3>
-          <p class="w3-opacity">Software Developer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p class="w3-opacity">Vice President, Product Management</p>
+          <p>“Lots of companies don’t succeed over time. What do they fundamentally do wrong? They usually miss the future. Spinning your wheels needlessly isn’t an option, so utilize what you can (in both technology and culture).” </p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="ankitha.jpg" style="width:100%">
+        <img src="ankitha.jpg" style="width:100%; height: 335px;">
         <div class="w3-container">
           <h3>Ankitha Harkare</h3>
-          <p class="w3-opacity">Software Developer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p class="w3-opacity">Vice President, Human Resources</p>
+          <p>'The distance between number one and number two is always a constant. If you want to improve the organization, you have to improve yourself and the organization gets pulled up with you. That is a big lesson. Companies should start communicating."</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
@@ -163,8 +164,8 @@ body, html {
         <img src="Pratiskha.jpg" style="width:100%">
         <div class="w3-container">
           <h3>Pratiksha Gowda</h3>
-          <p class="w3-opacity">Software Developer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p class="w3-opacity">Vice President, Engineering</p>
+          <p>"Business decisions should never be boring. You’re either excited about them, or you’re not. Putting yourself behind an idea can be a daunting task, but if you’re willing to put in the effort, you should be excited to see the outcome."</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
@@ -174,12 +175,70 @@ body, html {
   </div>
 </div>
 
-<div class="w3-container" id="contact">
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="focusareas">
+  <h3 class="w3-center">OUR FOCUS AREAS</h3>
+  <p class="w3-center w3-large">What we've done for people</p>
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Our Skills.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-col m6">
+       <img src="software-clipart-technical-skill-12.jpg" style="width:80%;">
+    </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-white" style="padding:128px 16px" id="pricing">
+  <hr>
+  <div class="w3-center">
+    <h3 class="w3-center">Pricing</h3>
+    <h3>Great Solutions At Great Hiring Prices.</h3>
+    <p w3-class="w3-large">Our team will closely work with a customer to minimize their efforts and providing a maximum satisfaction at all. All our peoples are hands of good expertise and well domain knowledge to manage the requirements offer by our clients in a right way. Quality services and customer satisfaction is our primary motto. Select one of our plans below to get great results and keep coming back.
+    </p>
+  </div>
+<div class="w3-responsive w3-card-4">
+<table class="w3-table w3-striped w3-bordered">
+<thead>
+<tr class="w3-theme">
+  <th>Choose Plan</th>
+  <th>Artificial Intelligence</th>
+  <th>Cloud Computing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Basic</td>
+  <td>- Services<br> - Minimal Support</td>
+  <td> $1000 Per Year onwards <button class="w3-button w3-green w3-padding-large" style="margin-left:120px;">Sign Up</button></td>
+</tr>
+<tr class="w3-white">
+  <td>Pro</td>
+  <td>- Advanced Services<br> - 24/7 Support</td>
+  <td>$25,0000 Per Year onwards <button class="w3-button w3-green w3-padding-large" style="margin-left:100px;">Sign Up</button></td>
+</tr>
+<tr>
+  <td>Enterprise</td>
+  <td>- Dedicated CRM<br>- 24/7 Support</td>
+  <td>$59,000 onwards<button class="w3-button w3-green w3-padding-large" style="margin-left:176px;">Sign Up</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<!--Contact Section -->
+<div class="w3-container"  style="padding:128px 16px" id="contact">
     <h2>Contact</h2>
     <p>If you have any questions,please contact us below at the belown shown address.</p>
-    <i class="fa fa-map-marker w3-text-red" style="width:30px"></i> Sunnyvale, US<br>
-    <i class="fa fa-phone w3-text-red" style="width:30px"></i> Phone: +00 1408-650-1932<br>
-    <i class="fa fa-envelope w3-text-red" style="width:30px"> </i> Email: uiteam_arkista@gmail.com<br>
+    <i class="fa fa-map-marker w3-text-red" style="width:30px"></i> Address: 495 E Java Dr, Sunnyvale, CA 94089<br>
+    <i class="fa fa-phone w3-text-red" style="width:30px"></i> Phone: (408) 822-6000<br>
+    <i class="fa fa-envelope w3-text-red" style="width:30px"> </i> Email: team_arkista@gmail.com<br>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
@@ -191,17 +250,33 @@ body, html {
 
 <!-- Footer -->
 
-<footer class="w3-container w3-padding-32 w3-light-grey  w3-center">
+<footer class="w3-container w3-padding-32 w3-white  w3-center">
   <a href="#" class="w3-button w3-grey w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <img src="connect_us.png" style="width:30%"
+     <img class= "w3-hover-opacity" src="facebook-logo.png" style="width:9%;">
+     <img class= "w3-hover-opacity" src="twitter-logo.png" style="width:8%;">
+     <img class= "w3-hover-opacity" src="google-plus-logo.png" style="width:8%;"> 
+     <img class= "w3-hover-opacity" src="linked_in-logo.png" style="width:8%;"> 
+     <img class= "w3-hover-opacity" src="YouTube-logo.png" style="width:10%; height:100px;">
   </div>
-  <p>Copyrights Reserved 2017 </p>
+  <p >Copyrights Reserved 2017- Arkisto </p>
 </footer>
 
+<script>
+var mySidebar = document.getElementById("mySidebar");
 
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
 
-
-
-
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<body>
 </html>
