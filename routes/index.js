@@ -11,7 +11,7 @@ exports.index = function(req, res) {
 exports.changebackground = function(req, res) {
 	var bgName = req.param('backgroundName');
 	console.log("Background: " + bgName);
-	var queryToChangeBackground = "UPDATE `config_params` SET `url`=" + bgName;
+	var queryToChangeBackground = "UPDATE `config_params` SET `url`='" + bgName+"'";
 	mysql.fetchData(function(err, results) {
 		if (err) {
 			console.log(err);
@@ -29,7 +29,7 @@ exports.changebackground = function(req, res) {
 exports.moveaside = function(req, res) {
 	var textAlign = req.param('direction');
 	console.log("Text Align: " + textAlign);
-	var queryToAlignText = "UPDATE `config_params` SET `align`=" + textAlign;
+	var queryToAlignText = "UPDATE `config_params` SET `align`='" + textAlign+"'";
 	mysql.fetchData(function(err, results) {
 		if (err) {
 			console.log(err);
@@ -48,7 +48,7 @@ exports.hidetable = function(req, res) {
 
 	var visibility = req.param('direction');
 	console.log("Visibility: " + visibility);
-	var queryToUpdateVisibility = "UPDATE `config_params` SET `visibility`="+ visibility;
+	var queryToUpdateVisibility = "UPDATE `config_params` SET `visibility`='"+ visibility+"'";
 	mysql.fetchData(function(err, results) {
 		if (err) {
 			console.log(err);
@@ -66,7 +66,7 @@ exports.hidetable = function(req, res) {
 exports.changetext = function(req, res) {
 	var text = req.param('text');
 	console.log("Visibility: " + text);
-	var queryToChangeText = "UPDATE `config_params` SET `text`=" + text;
+	var queryToChangeText = "UPDATE `config_params` SET `text`='" + text+"'";
 	mysql.fetchData(function(err, results) {
 		if (err) {
 			console.log(err);
