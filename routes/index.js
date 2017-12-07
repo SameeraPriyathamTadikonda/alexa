@@ -45,10 +45,13 @@ exports.moveaside = function(req, res) {
 };
 
 exports.hidetable = function(req, res) {
-
 	var visibility = req.param('visibility');
 	console.log("Visibility: " + visibility);
-	var queryToUpdateVisibility = "UPDATE `config_params` SET `visibility`='"+ visibility+"'";
+	var display='hidden';
+	if(visibility==='show'){
+		display='visible';
+	}
+	var queryToUpdateVisibility = "UPDATE `config_params` SET `visibility`='"+ display+"'";
 	mysql.fetchData(function(err, results) {
 		if (err) {
 			console.log(err);
